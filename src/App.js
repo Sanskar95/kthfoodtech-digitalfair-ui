@@ -12,8 +12,8 @@ function App() {
       <Layout />
 
       <Router>
-        <Route path="/" component={HomeScreen} />
-        <Route path="/company/:companyName" component={CompanyScreen} />
+        <Route exact path="/" component={HomeScreen} />
+        <Route exact path="/company/:companyName" component={CompanyScreen} />
       </Router>
     </div>
   );
