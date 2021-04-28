@@ -8,6 +8,8 @@ import DialogActions from "@material-ui/core/DialogActions";
 import Quiz from "react-quiz-component";
 import { getCompanyQuestions } from "../Rest/QuestionService";
 import { changeUserPoints } from "../Rest/UserService";
+import { withRouter } from "react-router-dom";
+
 
 function tranformQuestionResponse(questionResponse) {
   let transformedQuestions = [];
@@ -67,7 +69,6 @@ class CompanyDetailsArea extends Component {
   };
 
   onCompleteAction = (obj) => {
-    console.log(obj);
     this.setState({ score: obj.correctPoints });
   };
 
@@ -78,44 +79,19 @@ class CompanyDetailsArea extends Component {
         <div style={{ margin: "auto", height: "10rem" }}>
           <Paper style={{ margin: "3rem" }} elevation={3}>
             <p style={{ fontSize: "25px" }}>
-              Gates was born and raised in Seattle, Washington. In 1975, he
-              co-founded Microsoft with childhood friend Paul Allen in
-              Albuquerque, New Mexico. It went on to become the world's largest
-              personal computer software company.[5][a] Gates led the company as
-              chairman and CEO until stepping down as CEO in January 2000,
-              succeeded by Steve Ballmer, but he remained chairman and became
-              chief software architect.[8] During the late 1990s, he had been
-              criticized for his business tactics, which have been considered
-              anti-competitive. This opinion has been upheld by numerous court
-              rulings.[9] In June 2006, Gates announced that he would be
-              transitioning to a part-time role at Microsoft and full-time work
-              at the Bill & Melinda Gates Foundation, the private charitable
-              foundation he and his wife, Melinda Gates, established in
-              2000.[10] He gradually transferred his duties to Ray Ozzie and
-              Craig Mundie.[11] He stepped down as chairman of Microsoft in
-              February 2014 and assumed a new post as technology adviser to
-              support the newly appointed CEO Satya Nadella.[12] In March 2020,
-              Gates left his board positions at Microsoft and Berkshire Hathaway
-              to focus on his philanthropic efforts including climate change,
-              global health and development, and education.[13] Since 1987, he
-              has been included in the Forbes list of the world's wealthiest
-              people.[14][15] From 1995 to 2017, he held the Forbes title of the
-              richest person in the world every year except from 2010 to
-              2013.[16] In October 2017, he was surpassed by Amazon founder and
-              CEO Jeff Bezos, who had an estimated net worth of US$90.6 billion
-              compared to Gates's net worth of US$89.9 billion at the time.[17]
-              As of April 2021, Gates had an estimated net worth of US$146.7
-              billion, making him the third-richest person in the world.
+              {this.props.location.state.companyContent}
             </p>
-            <Button
-              size="large"
-              variant="outlined"
-              color="secondary"
-              style={{ fontSize: "40px", position: "fixed" }}
-              onClick={this.handleModalOpen}
-            >
-              Play a quiz
-            </Button>
+            {this.props.location.state.showQuiz && (
+              <Button
+                size="large"
+                variant="outlined"
+                color="secondary"
+                style={{ fontSize: "20px", position: "absolute", left: '35%' }}
+                onClick={this.handleModalOpen}
+              >
+                Play a quiz
+              </Button>
+            )}
           </Paper>
 
           <Dialog
@@ -149,4 +125,4 @@ class CompanyDetailsArea extends Component {
   }
 }
 
-export default CompanyDetailsArea;
+export default withRouter(CompanyDetailsArea);

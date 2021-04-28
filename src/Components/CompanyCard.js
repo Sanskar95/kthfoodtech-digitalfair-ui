@@ -21,22 +21,18 @@ function convertStringToCamelCase(sentence) {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 500,
+    
   },
   media: {
     height: 200,
+    width: 500
   },
 });
 
 export default function CompanyCard(props) {
   const classes = useStyles();
   const history = useHistory();
-  const handleClick = () => history.push(`/company/${convertStringToCamelCase(props.companyName)}`);
-
-
- const  nextPath=(path) =>{
-    props.history.push(path);
-  }
+  const handleClick = () => history.push(`/company/${convertStringToCamelCase(props.companyName)}`, {companyContent: props.companyContent, showQuiz: props.showQuiz});
 
   return (
     <Card className={classes.root}>
@@ -50,16 +46,11 @@ export default function CompanyCard(props) {
           <Typography gutterBottom variant="h5" component="h2">
             {props.companyName}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.briefDescription}
-          </Typography>
+        
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
+        <Button onClick={handleClick} size="small" color="primary" variant="outlined">
           Learn More
         </Button>
       </CardActions>

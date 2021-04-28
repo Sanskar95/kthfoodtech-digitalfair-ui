@@ -9,7 +9,7 @@ const Layout = () => {
             <AppBar position="sticky" style={{background: '#08e8de'}}>
                 <Toolbar>
                     <Typography style={{ flexGrow: 1 }}>
-                       <img style={{height: '10rem', width: '30rem'}} src="images/logo.png"/>
+                       <img style={{height: '5rem', width: '15rem'}} src="images/logo.png"/>
                     </Typography>
 
                 </Toolbar>
