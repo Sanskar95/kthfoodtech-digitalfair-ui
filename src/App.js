@@ -9,9 +9,10 @@ import CompanyScreen from "./Screens/CompanyScreen";
 function App() {
   return (
     <div className="App">
-      <Layout />
+     
 
       <Router>
+      <Layout />
         <Route exact path="/" component={HomeScreen} />
         <Route exact path="/company/:companyName" component={CompanyScreen} />
       </Router>

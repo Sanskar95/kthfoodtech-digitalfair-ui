@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useHistory } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
+
 
 function convertStringToCamelCase(sentence) {
   return sentence.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g,
@@ -29,10 +31,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CompanyCard(props) {
+function CompanyCard(props) {
   const classes = useStyles();
   const history = useHistory();
-  const handleClick = () => history.push({pathName: `/company/${convertStringToCamelCase(props.companyName)}`, state:{companyContent: props.companyContent, showQuiz: props.showQuiz}});
+  // const handleClick = () => history.push({pathName: `/company/${convertStringToCamelCase(props.companyName)}`, state:{companyContent: props.companyContent, showQuiz: props.showQuiz}});
+  const handleClick = () => history.push(`/company/${convertStringToCamelCase(props.companyName)}`);
+
 
   return (
     <Card className={classes.root}>
@@ -57,3 +61,5 @@ export default function CompanyCard(props) {
     </Card>
   );
 }
+
+export default withRouter(CompanyCard);
