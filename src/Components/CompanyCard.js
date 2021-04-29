@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 export default function CompanyCard(props) {
   const classes = useStyles();
   const history = useHistory();
-  const handleClick = () => history.push(`/company/${convertStringToCamelCase(props.companyName)}`, {companyContent: props.companyContent, showQuiz: props.showQuiz});
+  const handleClick = () => history.push({pathName: `/company/${convertStringToCamelCase(props.companyName)}`, state:{companyContent: props.companyContent, showQuiz: props.showQuiz}});
 
   return (
     <Card className={classes.root}>

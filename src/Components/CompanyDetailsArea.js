@@ -9,7 +9,15 @@ import Quiz from "react-quiz-component";
 import { getCompanyQuestions } from "../Rest/QuestionService";
 import { changeUserPoints } from "../Rest/UserService";
 import { withRouter } from "react-router-dom";
-
+import Snake from "react-simple-snake";
+import image from '../Images/swegreen-header.jpg'
+import Divider from '@material-ui/core/Divider';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import CloseIcon from '@material-ui/icons/Close';
+import Slide from '@material-ui/core/Slide';
 
 function tranformQuestionResponse(questionResponse) {
   let transformedQuestions = [];
@@ -32,12 +40,16 @@ function tranformQuestionResponse(questionResponse) {
 
   return transformedQuestions;
 }
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
 class CompanyDetailsArea extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isModalOpen: false,
+      isSnakeModalOpen: false,
       quiz: null,
       score: 0,
     };
@@ -62,38 +74,47 @@ class CompanyDetailsArea extends Component {
     this.setState({ isModalOpen: false });
   };
 
+  handleSnakeClose = () => {
+    this.setState({ isSnakeModalOpen: false });
+  };
+
   handlePointsSubmit = () => {
     changeUserPoints("snskr95", this.state.score).then(() => {
       this.setState({ isModalOpen: false });
     });
   };
 
+  handleSnakeModalOpen = () => {
+    this.setState({ isSnakeModalOpen: true });
+  };
+
   onCompleteAction = (obj) => {
     this.setState({ score: obj.correctPoints });
   };
-
+ 
   render() {
-    const { isModalOpen, quiz } = this.state;
+    const { isModalOpen, quiz, isSnakeModalOpen } = this.state;
     return (
       <div>
         <div style={{ margin: "auto", height: "10rem" }}>
           <Paper style={{ margin: "3rem" }} elevation={3}>
+            <img style={{width: '100%'}}src={image}/>
             <p style={{ fontSize: "25px" }}>
               {this.props.location.state.companyContent}
             </p>
+          
+            <div style={{ textAlign: 'center' }}>
             {this.props.location.state.showQuiz && (
-              <Button
-                size="large"
-                variant="outlined"
-                color="secondary"
-                style={{ fontSize: "20px", position: "absolute", left: '35%' }}
-                onClick={this.handleModalOpen}
-              >
-                Play a quiz
-              </Button>
+              <Button variant="contained" color="primary" size="large" style={{fontSize: "20px",backgroundColor: 'coral'}} onClick={this.handleModalOpen}>
+              Play quiz!
+            </Button>
             )}
+            <Button variant="contained" color="primary" size="large" style={{marginLeft: '2rem', fontSize: "20px",backgroundColor: 'green',}} onClick={this.handleSnakeModalOpen}>
+              Play snake!
+            </Button>
+          </div>
           </Paper>
-
+          
           <Dialog
             onClose={this.handleClose}
             aria-labelledby="customized-dialog-title"
@@ -103,7 +124,7 @@ class CompanyDetailsArea extends Component {
               id="customized-dialog-title"
               onClose={this.handleClose}
             >
-              Modal title
+              Quiz!
             </DialogTitle>
             <DialogContent dividers>
               <Quiz quiz={quiz} onComplete={this.onCompleteAction} />
@@ -120,6 +141,31 @@ class CompanyDetailsArea extends Component {
             </DialogActions>
           </Dialog>
         </div>
+
+        <Dialog fullScreen open={isSnakeModalOpen} onClose={this.handleSnakeClose} TransitionComponent={Transition}>
+        <AppBar >
+          <Toolbar>
+            <IconButton edge="start" color="inherit" onClick={this.handleSnakeClose} aria-label="close">
+              <CloseIcon />
+            </IconButton>
+            <Typography variant="h6">
+              Snake
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Snake />
+            <Button
+              autoFocus
+              style={{fontSize: "20px",backgroundColor: 'green'}}
+              onClick={this.handlePointsSubmit}
+              color="primary"
+              variant="contained"
+            >
+              SUBMIT POINTS
+            </Button>
+      </Dialog>
+
+      
       </div>
     );
   }
