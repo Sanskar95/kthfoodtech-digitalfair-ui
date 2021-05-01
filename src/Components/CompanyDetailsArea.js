@@ -18,6 +18,9 @@ import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import { companyStuff } from "../Data/data";
+import ThemeContext from "../Context/ThemeContext";
+
+
 
 function tranformQuestionResponse(questionResponse) {
   let transformedQuestions = [];
@@ -45,6 +48,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 class CompanyDetailsArea extends Component {
+  static contextType = ThemeContext;
   constructor(props) {
     super(props);
     this.state = {
@@ -65,6 +69,10 @@ class CompanyDetailsArea extends Component {
     this.setState({ quiz: quiz });
   };
   componentDidMount() {
+    console.log("---------")
+    console.log(this.context)
+    console.log("---------")
+
     this.getDisplayData(companyStuff);
     this.fetchRequests();
   }
@@ -92,16 +100,19 @@ class CompanyDetailsArea extends Component {
     changeUserPoints(localStorage.getItem("username"), this.state.score).then(
       () => {
         this.setState({ isModalOpen: false });
+        window.location.reload(); 
       }
     );
   };
 
   handleSnakePointsSubmit = () => {
+    this.context.increment(5)
     changeUserPoints(
       localStorage.getItem("username"),
       localStorage.getItem("snakeHighScore")
     ).then(() => {
       this.setState({ isSnakeModalOpen: false });
+      window.location.reload(); 
     });
   };
 
@@ -220,15 +231,18 @@ class CompanyDetailsArea extends Component {
             </Toolbar>
           </AppBar>
           <Snake />
+          <div style={{textAlign: 'center'}}>
           <Button
             autoFocus
-            style={{ fontSize: "20px", backgroundColor: "green", width: '30%', textAlign: "center" }}
+            style={{ fontSize: "20px", backgroundColor: "green", width: '10%', margin: '2rem', borderRadius: '20px' }}
             onClick={this.handleSnakePointsSubmit}
             color="primary"
             variant="contained"
           >
-            SUBMIT POINTS
+            SUBMIT score
           </Button>
+          </div>
+         
         </Dialog>
       </div>
     );
