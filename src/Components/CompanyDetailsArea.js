@@ -106,7 +106,6 @@ class CompanyDetailsArea extends Component {
   };
 
   handleSnakePointsSubmit = () => {
-    this.context.increment(5)
     changeUserPoints(
       localStorage.getItem("username"),
       localStorage.getItem("snakeHighScore")

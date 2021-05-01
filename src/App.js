@@ -30,7 +30,7 @@ function App() {
     } else {
       getUserByUsername(localStorage.getItem("username")).then((response) => {
         setUser(response.data);
-        updatePoints(response.data.points);
+        updatePoints(response.data.points + response.data.snakePoints);
       });
     }
   }, []);
@@ -40,13 +40,16 @@ function App() {
       .then((response) => {
         setIsUserModalOpen(false);
         localStorage.setItem("username", response.data.username);
+        
       })
       .catch(() => {
         createUser(username, email).then((response) => {
           setIsUserModalOpen(false);
           localStorage.setItem("username", response.data.username);
         });
-      });
+      }).finally(()=>{
+        updatePoints(response.data.points + response.data.snakePoints);
+      })
   };
 
   const handleUsernameTextFieldChange = (event) => {
