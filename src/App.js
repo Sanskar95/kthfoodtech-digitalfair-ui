@@ -47,7 +47,7 @@ function App() {
           setIsUserModalOpen(false);
           localStorage.setItem("username", response.data.username);
         });
-      }).finally(()=>{
+      }).finally((response)=>{
         updatePoints(response.data.points + response.data.snakePoints);
       })
   };

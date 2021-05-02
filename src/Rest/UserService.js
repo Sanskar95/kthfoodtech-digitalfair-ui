@@ -6,6 +6,13 @@ export const changeUserPoints =(username, points)=>{
     return axios.get(url);
 }
 
+export const changeUserSnakePoints =(username, points)=>{
+    const url = `https://kthfoodtech-digitalfair.herokuapp.com/user/change_snake_points/${username}/${points}`;
+    return axios.get(url);
+}
+
+
+
 
 export const getUserByUsername =(username) =>{
     const url = `https://kthfoodtech-digitalfair.herokuapp.com/user/${username}`;

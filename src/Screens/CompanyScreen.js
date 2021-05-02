@@ -5,10 +5,6 @@ import ThemeContext from '../Context/ThemeContext';
 
 
 class CompanyScreen extends Component {
-static contextType= ThemeContext
-    componentDidMount(){
-        console.log(this.context)
-    }
     render() {
         return (
             <CompanyDetailsArea/>

@@ -23,11 +23,16 @@ function convertStringToCamelCase(sentence) {
 
 const useStyles = makeStyles({
   root: {
-    
+  
+    width: '400px',
+    margin: '10px',
+   
+   
   },
   media: {
-    height: 200,
-    width: 500
+    height: '170px',
+    width: '100%'
+   
   },
 });
 

@@ -56,23 +56,24 @@ export default class HomeScreen extends Component {
   render() {
     const { user } = this.state;
     return (
-      <div>
+    
        
 
-        <div style={{ margin: "2rem" }}>
-          <Grid container spacing={3}>
+       
+          <Grid container spacing={2} style={{justifyContent: 'center', marginTop: '2rem'}} >
             {companyStuff.map((company) => {
               return (
-                <Grid item xs>
+              
                   <CompanyCard {...company} />
-                </Grid>
+                
+               
               );
             })}
           </Grid>
 
           
-        </div>
-      </div>
+       
+   
     );
   }
 }

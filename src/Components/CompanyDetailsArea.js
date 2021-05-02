@@ -19,6 +19,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import { companyStuff } from "../Data/data";
 import ThemeContext from "../Context/ThemeContext";
+import {changeUserSnakePoints} from '../Rest/UserService'
 
 
 
@@ -69,9 +70,6 @@ class CompanyDetailsArea extends Component {
     this.setState({ quiz: quiz });
   };
   componentDidMount() {
-    console.log("---------")
-    console.log(this.context)
-    console.log("---------")
 
     this.getDisplayData(companyStuff);
     this.fetchRequests();
