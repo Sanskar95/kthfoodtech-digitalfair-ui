@@ -16,6 +16,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import { createUser } from "./Rest/UserService";
+import CodeCheckoutScreen from "./Screens/CodeCheckoutScreen";
 
 function App() {
   const [username, setUsername] = React.useState(null);
@@ -40,15 +41,15 @@ function App() {
       .then((response) => {
         setIsUserModalOpen(false);
         localStorage.setItem("username", response.data.username);
+        updatePoints(response.data.points + response.data.snakePoints);
         
       })
       .catch(() => {
         createUser(username, email).then((response) => {
           setIsUserModalOpen(false);
           localStorage.setItem("username", response.data.username);
+         
         });
-      }).finally((response)=>{
-        updatePoints(response.data.points + response.data.snakePoints);
       })
   };
 
@@ -88,6 +89,11 @@ function App() {
             </ThemeContext.Provider>
           )}
         />
+        <Route
+          exact
+          path="/checkout"
+          component={CodeCheckoutScreen}
+        />
       </Router>
 
       <Dialog open={isUserModalOpen} aria-labelledby="form-dialog-title">
@@ -112,7 +118,7 @@ function App() {
             autoFocus
             margin="dense"
             id="email"
-            label="Email Address"
+            label="Email Address(Optional)"
             type="email"
             fullWidth
             variant="outlined"

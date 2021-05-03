@@ -52,9 +52,14 @@ function CompanyCard(props) {
           onClick={handleClick}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography style={{fontSize: '25px', fontWeight: '1000'}} >
             {props.companyName}
           </Typography>
+
+          <Typography style={{fontSize: '15px', fontWeight: '200'}}>
+            Webinar on friday 4 to 5
+          </Typography>
+
         
         </CardContent>
       </CardActionArea>
@@ -62,6 +67,11 @@ function CompanyCard(props) {
         <Button onClick={handleClick} size="small" color="primary" variant="outlined">
           Learn More
         </Button>
+
+        <Button onClick={handleClick} size="small" color="green" variant="outlined">
+          Take me to the event!
+        </Button>
+
       </CardActions>
     </Card>
   );

@@ -126,14 +126,13 @@ class CompanyDetailsArea extends Component {
     return (
       <div>
         <div style={{ margin: "auto", height: "10rem" }}>
-          <Paper style={{ margin: "1rem" }} elevation={3}>
+          <Paper style={{ margin: "1rem", backgroundColor: '#AAE2ED' }} elevation={3}>
             <img
               style={{
-                width: "70%",
+               
                 display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                height: "auto",
+                margin: '0 auto',
+                maxWidth: '100%'
               }}
               src={image}
             />
@@ -149,7 +148,7 @@ class CompanyDetailsArea extends Component {
               {companyObject.companyContent}
             </p>
 
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center" , padding: '1rem'}}>
               {companyObject.showQuiz && (
                 <Button
                   variant="contained"
