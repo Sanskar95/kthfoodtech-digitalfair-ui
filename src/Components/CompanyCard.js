@@ -26,11 +26,9 @@ const useStyles = makeStyles({
   
     width: '400px',
     margin: '10px',
-   
-   
   },
   media: {
-    height: '170px',
+    height: '290px',
     width: '100%'
    
   },
@@ -39,8 +37,8 @@ const useStyles = makeStyles({
 function CompanyCard(props) {
   const classes = useStyles();
   const history = useHistory();
-  // const handleClick = () => history.push({pathName: `/company/${convertStringToCamelCase(props.companyName)}`, state:{companyContent: props.companyContent, showQuiz: props.showQuiz}});
-  const handleClick = () => history.push(`/company/${convertStringToCamelCase(props.companyName)}`);
+  const handleClick = () => history.push(`/company/${props.companyUrlString}`);
+  const handleEventButtonClick = (url) => window.open(url, '_blank');
 
 
   return (
@@ -59,8 +57,6 @@ function CompanyCard(props) {
           <Typography style={{fontSize: '15px', fontWeight: '200'}}>
             Webinar on friday 4 to 5
           </Typography>
-
-        
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -68,7 +64,7 @@ function CompanyCard(props) {
           Learn More
         </Button>
 
-        <Button onClick={handleClick} size="small" color="green" variant="outlined">
+        <Button onClick={()=>handleEventButtonClick(props.meetingLink)} size="small" color="green" variant="outlined">
           Take me to the event!
         </Button>
 

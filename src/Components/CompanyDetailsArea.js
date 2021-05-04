@@ -10,7 +10,6 @@ import { getCompanyQuestions } from "../Rest/QuestionService";
 import { changeUserPoints } from "../Rest/UserService";
 import { withRouter } from "react-router-dom";
 import Snake from "react-simple-snake";
-import image from "../Images/swegreen-header.jpg";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -19,9 +18,8 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import { companyStuff } from "../Data/data";
 import ThemeContext from "../Context/ThemeContext";
-import {changeUserSnakePoints} from '../Rest/UserService'
-
-
+import Markdown from "markdown-to-jsx";
+import * as companyMarkdowns from "../Data/markdowns";
 
 function tranformQuestionResponse(questionResponse) {
   let transformedQuestions = [];
@@ -58,6 +56,7 @@ class CompanyDetailsArea extends Component {
       quiz: null,
       score: 0,
       companyObject: {},
+      markdown: "",
     };
   }
 
@@ -69,8 +68,8 @@ class CompanyDetailsArea extends Component {
     quiz["questions"] = tranformQuestionResponse(questions.data);
     this.setState({ quiz: quiz });
   };
-  componentDidMount() {
 
+  componentDidMount() {
     this.getDisplayData(companyStuff);
     this.fetchRequests();
   }
@@ -98,7 +97,7 @@ class CompanyDetailsArea extends Component {
     changeUserPoints(localStorage.getItem("username"), this.state.score).then(
       () => {
         this.setState({ isModalOpen: false });
-        window.location.reload(); 
+        window.location.reload();
       }
     );
   };
@@ -109,7 +108,7 @@ class CompanyDetailsArea extends Component {
       localStorage.getItem("snakeHighScore")
     ).then(() => {
       this.setState({ isSnakeModalOpen: false });
-      window.location.reload(); 
+      window.location.reload();
     });
   };
 
@@ -126,29 +125,29 @@ class CompanyDetailsArea extends Component {
     return (
       <div>
         <div style={{ margin: "auto", height: "10rem" }}>
-          <Paper style={{ margin: "1rem", backgroundColor: '#AAE2ED' }} elevation={3}>
+          <Paper
+            style={{ margin: "1rem", backgroundColor: "#AAE2ED" }}
+            elevation={3}
+          >
             <img
               style={{
-               
                 display: "block",
-                margin: '0 auto',
-                maxWidth: '100%'
+                margin: "0 auto",
+                maxWidth: "60%",
               }}
-              src={image}
+              src={window.location.origin + companyObject.headerImagePath}
             />
-            <p
+            <Markdown
               style={{
-                fontSize: "20px",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
                 width: "80%",
+                fontSize: "25px",
+                display: "block",
+                marginRight: "auto",
+                marginLeft: "auto",
               }}
-            >
-              {companyObject.companyContent}
-            </p>
-
-            <div style={{ textAlign: "center" , padding: '1rem'}}>
+              children={companyMarkdowns[this.props.match.params.companyName]}
+            />
+            <div style={{ textAlign: "center", padding: "1rem" }}>
               {companyObject.showQuiz && (
                 <Button
                   variant="contained"
@@ -227,18 +226,23 @@ class CompanyDetailsArea extends Component {
             </Toolbar>
           </AppBar>
           <Snake />
-          <div style={{textAlign: 'center'}}>
-          <Button
-            autoFocus
-            style={{ fontSize: "20px", backgroundColor: "green", width: '10%', margin: '2rem', borderRadius: '20px' }}
-            onClick={this.handleSnakePointsSubmit}
-            color="primary"
-            variant="contained"
-          >
-            SUBMIT score
-          </Button>
+          <div style={{ textAlign: "center" }}>
+            <Button
+              autoFocus
+              style={{
+                fontSize: "20px",
+                backgroundColor: "green",
+                width: "10%",
+                margin: "2rem",
+                borderRadius: "20px",
+              }}
+              onClick={this.handleSnakePointsSubmit}
+              color="primary"
+              variant="contained"
+            >
+              SUBMIT score
+            </Button>
           </div>
-         
         </Dialog>
       </div>
     );

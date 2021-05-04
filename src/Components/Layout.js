@@ -3,6 +3,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import logo from "../Images/logo.png";
+import digFairLogo from "../Images/dig_fair_logo.png"
 import { Link } from "react-router-dom";
 import burger from "../Images/burger.png";
 import Button from "@material-ui/core/Button";
@@ -23,6 +24,11 @@ const Layout = (props) => {
               <img style={{ height: "8rem", width: "20rem" }} src={logo} />
             </Link>
           </Typography>
+          {/* <Typography style={{ flexGrow: 1 }}>
+            <Link to="/">
+              <img style={{ height: "4rem", width: "25rem" }} src={digFairLogo} />
+            </Link>
+          </Typography> */}
           <Button
             style={{ margin: "auto", borderRadius: "30px" }}
             color="inherit"
