@@ -32,7 +32,9 @@ function App() {
       getUserByUsername(localStorage.getItem("username")).then((response) => {
         setUser(response.data);
         updatePoints(response.data.points + response.data.snakePoints);
-      });
+      }).catch(()=>{
+        setIsUserModalOpen(true);
+      })
     }
   }, []);
 

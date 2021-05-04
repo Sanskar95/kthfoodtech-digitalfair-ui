@@ -28,3 +28,16 @@ export const createUser =(username, email)=>{
     const url = `https://kthfoodtech-digitalfair.herokuapp.com/user/create`
     return axios.post(url, requestBody)
 }
+
+export const applyCode =(username, email, redeemCode)=>{
+    const requestBody={
+        username: username,
+        email: email,
+        redeemCode: redeemCode
+    }
+    const url = `https://kthfoodtech-digitalfair.herokuapp.com/user/apply_code`
+    return axios.post(url, requestBody)
+}
+
+
+

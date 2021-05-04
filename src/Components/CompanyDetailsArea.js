@@ -7,7 +7,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 import Quiz from "react-quiz-component";
 import { getCompanyQuestions } from "../Rest/QuestionService";
-import { changeUserPoints } from "../Rest/UserService";
+import { changeUserPoints, changeUserSnakePoints } from "../Rest/UserService";
 import { withRouter } from "react-router-dom";
 import Snake from "react-simple-snake";
 import AppBar from "@material-ui/core/AppBar";
@@ -61,7 +61,9 @@ class CompanyDetailsArea extends Component {
   }
 
   fetchRequests = async () => {
-    const questions = await getCompanyQuestions("abc");
+    const questions = await getCompanyQuestions(
+      this.props.match.params.companyName
+    );
     let quiz = {};
     quiz["quizTitle"] = "Company Quiz";
     quiz["quizSynopsis"] = "Some generic description";
@@ -103,7 +105,7 @@ class CompanyDetailsArea extends Component {
   };
 
   handleSnakePointsSubmit = () => {
-    changeUserPoints(
+    changeUserSnakePoints(
       localStorage.getItem("username"),
       localStorage.getItem("snakeHighScore")
     ).then(() => {
@@ -129,6 +131,7 @@ class CompanyDetailsArea extends Component {
             style={{ margin: "1rem", backgroundColor: "#AAE2ED" }}
             elevation={3}
           >
+           
             <img
               style={{
                 display: "block",
@@ -137,6 +140,7 @@ class CompanyDetailsArea extends Component {
               }}
               src={window.location.origin + companyObject.headerImagePath}
             />
+             <Typography style={{fontSize: '3rem',textAlign: 'center', fontWeight: '1000'}}>{companyObject.companyName}</Typography>
             <Markdown
               style={{
                 width: "80%",
@@ -147,8 +151,10 @@ class CompanyDetailsArea extends Component {
               }}
               children={companyMarkdowns[this.props.match.params.companyName]}
             />
+            
             <div style={{ textAlign: "center", padding: "1rem" }}>
-              {companyObject.showQuiz && (
+           
+              {quiz && quiz.questions.length > 0 && companyObject.showQuiz && (
                 <Button
                   variant="contained"
                   color="primary"
@@ -163,19 +169,21 @@ class CompanyDetailsArea extends Component {
                   Play quiz!
                 </Button>
               )}
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                style={{
-                  fontSize: "20px",
-                  backgroundColor: "green",
-                  borderRadius: "30px",
-                }}
-                onClick={this.handleSnakeModalOpen}
-              >
-                Play snake!
-              </Button>
+              {this.props.match.params.companyName === "kthFoodTech" && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="large"
+                  style={{
+                    fontSize: "20px",
+                    backgroundColor: "green",
+                    borderRadius: "30px",
+                  }}
+                  onClick={this.handleSnakeModalOpen}
+                >
+                  Play snake!
+                </Button>
+              )}
             </div>
           </Paper>
 

@@ -44,7 +44,7 @@ const foodLoopz= `Foodloopz works for the vision of Zero Food Waste in the food 
 Visit our website http://www.foodloopz.se/.`
 
 
-const kthFoodTech= `We connect KTH students to the amazing and fast paced world of Foodtech. Foodtech aims to improve agriculture and food production, the supply chain, the distribution channels, consumption and waste by the help of technology!
+const kthFoodTech= `**We connect KTH students to the amazing and fast paced world of Foodtech. Foodtech aims to improve agriculture and food production, the supply chain, the distribution channels, consumption and waste by the help of technology!**
 
 So, what is Foodtech? We like to think of it as the intersection of food and technology; the application and use of technology to improve agriculture and food production, the supply chain, the distribution channels and ultimately consumption. Basically, this covers everything from the innovation of new amazing food products like Oumph or Oatley iKaffe to urban farming, delivery solutions and Foodtech IoT solutions!
 

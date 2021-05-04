@@ -21,14 +21,14 @@ const Layout = (props) => {
         <Toolbar>
           <Typography style={{ flexGrow: 1 }}>
             <Link to="/">
-              <img style={{ height: "8rem", width: "20rem" }} src={logo} />
+              <img style={{ height: "8rem", width: "15rem" }} src={logo} />
             </Link>
           </Typography>
-          {/* <Typography style={{ flexGrow: 1 }}>
+          <Typography >
             <Link to="/">
-              <img style={{ height: "4rem", width: "25rem" }} src={digFairLogo} />
+              <img style={{ height: "4rem", width: "15%" }} src={digFairLogo} />
             </Link>
-          </Typography> */}
+          </Typography>
           <Button
             style={{ margin: "auto", borderRadius: "30px" }}
             color="inherit"

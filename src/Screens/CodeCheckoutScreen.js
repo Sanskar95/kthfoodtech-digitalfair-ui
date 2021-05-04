@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/styles";
 import TextField from "@material-ui/core/TextField";
+import {applyCode} from "../Rest/UserService"
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 import Button from "@material-ui/core/Button";
+toast.configure();
+
 
 const styles = () => ({
   textField: {
@@ -23,6 +30,16 @@ class CheckoutScreen extends Component {
     console.log(event.target.id);
     this.setState({ [event.target.id]: event.target.value });
   };
+
+  handleSubmit=()=>{
+    const {code, email}= this.state
+    applyCode(localStorage.getItem('username'), email, code).then(()=>{
+      toast.success("Code Applied SuccessFully")
+      window.location.reload();
+    }).catch(()=>{
+      toast.error("Invalid Code!")
+    })
+  }
 
   render() {
     const { classes } = this.props;
@@ -56,7 +73,7 @@ class CheckoutScreen extends Component {
             }}
             variant="contained"
             color="secondary"
-            onClick={this.handleCreate}
+            onClick={this.handleSubmit}
           >
             Submit!
           </Button>
