@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CompanyCard from "../Components/CompanyCard";
 import Grid from "@material-ui/core/Grid";
 import { companyStuff } from "../Data/data";
+import { BottomNavigation } from "@material-ui/core";
 
 // const PointsContext = React.createContext(0);
 

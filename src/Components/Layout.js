@@ -17,28 +17,40 @@ const Layout = (props) => {
   const handleClick = () => history.push(`/checkout`);
   return (
     <div>
-      <AppBar position="sticky" style={{ background: "#08e8de" }}>
+      <AppBar position="sticky" style={{ background: "#ffffff" }}>
         <Toolbar>
           <Typography style={{ flexGrow: 1 }}>
             <Link to="/">
               <img style={{ height: "8rem", width: "15rem" }} src={logo} />
             </Link>
           </Typography>
-          <Typography >
+          {/* <Typography >
             <Link to="/">
               <img style={{ height: "4rem", width: "15%" }} src={digFairLogo} />
             </Link>
-          </Typography>
+          </Typography> */}
+
+          {/* <Button
+            style={{ margin: "auto" }}
+            color="primary"
+            onClick={handleClick}
+            variant='contained'
+          >
+          Test
+          </Button> */}
+
           <Button
             style={{ margin: "auto", borderRadius: "30px" }}
             color="inherit"
             onClick={handleClick}
           >
-            <img style={{ height: "5rem", width: "5rem" }} src={burger} />
+           
 
             <p style={{ fontSize: "2rem", fontWeight: "40px", color: "black" }}>
               {points}
             </p>
+            <img style={{ height: "3rem", width: "3rem" }} src={burger} />
+          <p style={{color: 'red', fontSize: '1rem'}}>Click to Checkout!</p>
           </Button>
         </Toolbar>
       </AppBar>
