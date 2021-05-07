@@ -57,7 +57,7 @@ export const companyStuff = [
     headerImagePath: "/images/global-bugs-large.jpg",
   },
   {
-    imagePath: "images/hillpop-header.jpg",
+    imagePath: "images/hillpop-large.jpg",
     companyName: "Hillpop",
     showQuiz: true,
     companyUrlString: "hillpop",
@@ -93,12 +93,12 @@ export const companyStuff = [
   },
 
   {
-    imagePath: "images/restauranglabbet-header.jpg",
+    imagePath: "images/restauranglabbet.png",
     companyName: "Restauranglabbet",
     showQuiz: true,
     companyUrlString: "restauranglabbet",
     meetingLink: "https://www.facebook.com/",
-    headerImagePath: "/images/restauranglabbet.png",
+    headerImagePath: "/images/restauranglabbet-header.jpg ",
   },
 
   {

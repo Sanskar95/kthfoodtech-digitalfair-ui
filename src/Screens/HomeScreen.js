@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { companyStuff } from "../Data/data";
 import { BottomNavigation } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
-import test from "../Images/swegreen-header.jpg"
+import schedule from "../Images/schedule.png"
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -62,9 +62,8 @@ export default class HomeScreen extends Component {
         onClose={this.handleScheduleClose}
         aria-labelledby="max-width-dialog-title"
       >
-        <DialogTitle id="max-width-dialog-title">Optional sizes</DialogTitle>
         <DialogContent>
-         <img src={test}/>
+         <img  style={{ width: "100%", height: "800px" }} src={schedule}/>
           
         </DialogContent>
         <DialogActions>

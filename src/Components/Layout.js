@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import AppBar from "@material-ui/core/AppBar";
+import { makeStyles } from "@material-ui/core/styles";
+
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import logo from "../Images/logo.png";
@@ -24,11 +26,6 @@ const Layout = (props) => {
               <img style={{ height: "8rem", width: "15rem" }} src={logo} />
             </Link>
           </Typography>
-          {/* <Typography >
-            <Link to="/">
-              <img style={{ height: "4rem", width: "15%" }} src={digFairLogo} />
-            </Link>
-          </Typography> */}
 
           {/* <Button
             style={{ margin: "auto" }}
