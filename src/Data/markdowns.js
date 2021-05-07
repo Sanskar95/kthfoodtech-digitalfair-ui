@@ -61,7 +61,162 @@ Showcase how many different amazing plant-based food options we have today by le
 Website: http://kthfoodtech.se/
 Email: info@kthfoodtech.se`
 
+const globalBugs=`## Crickets, a Solution to a Sustainable Earth!
+
+With a relatively short history of operations, our company is already known as a key player
+in the alternative protein business…
+
+Managed by a team of professionals from Sweden and Thailand, we have constructed a process
+factory and an R&D cricket farm based on vertical farming and other innovative solutions
+that have given us the knowledge needed to scale up to our first EntoPark planned to be ready by 2020.
+
+The EntoPark takes the cricket farming to new dimensions and takes Global Bugs a great
+step further to become one of the largest scale lowest cost producer of alternative
+protein from crickets.
+
+Visit our website https://globalbugs.asia/.`
+
+const hillpop= `HILLPOP is organic cold brew coffee that’s a bit different. Grown naturally in the wild,
+cared for by passionate farmers, and made by people who know what they’re doing. No harm,
+no fuss – just premium cold brew with a twist.
+
+Read our presentation [here (PDF)](/documents/hillpop-profile-2020.pdf).\
+Visit us at [www.hillpop.co](http://www.hillpop.co).`
+
+const innoscentia = `The best before dates has reached their best before date!
+
+About 10% of the total food waste globally can be traced to confusion and faulty use of
+best-before-dates which is the area we want to enhance. We develop sensor based analogue
+and digital indicators of real time food status to prolong shelf and consumption time,
+thereby reducing waste costs and food waste. At the moment we are working with two
+versions of the technology, one analogue and one digital. Our aim is to reduce wasted
+food due to misuse of best before dates throughout the value chain and battle the
+unnecessary monumental environmental impact and multi-billion dollar loss this means
+today on a global scale.Currently we have a small team operating from Norrsken House in
+Stockholm and an R&D-team based in Hyderabad, India. We continuously run internship programs
+but also accept students writing their master thesis in themes aligned with our mission.
+
+Visit our website https://www.innoscentia.com/.`
+
+const mosaMeat= `Mark Post unveiled the world's first slaughter-free hamburger at a packed conference in
+London and the start of Mosa meats followed. Mosa meat was started with the aim to
+commercialise lab grown meat. Their focus now is to find scientific breakthroughs that
+lower the price of the product and enable an upscale of the production process.
+
+The meat product starts as a sample from livestock which is then cultured. The sample
+contains stem cells of muscles which creates new muscle cells in a live animal when a
+muscle is injured. The cells are placed in a medium containing all components needed for
+growth in a bioreactor. They proliferate and are then forced to differentiate into muscle
+cells by removing growth factors. Myotubes, a primitive muscle fibre, are created by muscle
+cells and these are then placed in a gel where muscles fibres can form. These muscle fibres
+then grow into small strands of muscle tissue which can then be layered to create meat.
+
+Visit our website https://www.mosameat.com/.`
+
+const noquofoods=`We love cheese. We love yoghurt. Ice cream too, and so many other animal based products
+that are fundamental to our culture and heritage. But using animals to produce these
+goodies is extremely wasteful and destructive.
+
+In early 2019, Sorosh Tavakoli and Anja Leissner, started Noquo Foods to challenge the
+status quo and re-invent the foods we love, starting with cheese.
+
+The non-dairy cheese products are seeing lower adoption than other products in the
+category indicating unimpressed consumers. We agree. The most popular vegan cheeses
+are made of coconut oil and starch. These are cheap and accessible but with an unimpressive
+experience. Then there’s the premium desert cheeses made from cashew nuts. These are
+expensive and cover only a niche category. This highlights a big hole in the cheese
+market (pun intended).
+
+Instead of coconut or cashews, Noquo Foods is making cheese out of legumes that are formed
+into what is called a “stable matrix.” This will allow the cheese to slice, melt, and
+taste like the real thing, and also have more protein than some other vegan options.
+
+Initially Noquo Foods will sell plant-based cheese to foodservice providers in Sweden in a
+similar model to Impossible Foods or Oatly. Down the road the aim is to create their own
+branded product line for retail.
+
+Visit our website http://noquofoods.com/.`
+
+const restauranglabbet= `Restauranglabbet is a platform for accelerated innovation in sustainable food and food
+industry. Through a design-driven process they create a full-scale test bed in a
+commercial environment that connects the worlds of academia and business. They implement
+scientific research and development of new technology to enable future resource-efficient
+restaurants. This generates a control system for the researchers' need for knowledge and
+the business community's need for answers. They put theory into practice, into a real
+restaurant - probably the most sustainable restaurant in the world.
+
+Visit our website https://restauranglabbet.se/.`
 
 
-export {klimato, a2o, swedenFoodtech, enklakassen, foodLoopz, kthFoodTech}
+const rscued= `0% of all fruits and vegetables produced are thrown away. That’s insane!
+
+We will change that. Through our juices we make sure that all raw products that still have more
+to give are taken care of. There’s nothing wrong with the fruit, usually it’s the opposite.
+A trivial reason like a damaged fruit box can be the reason an entire box of perfectly fine fruits are thrown away.
+
+In our hands the fruit and vegetables are turned into sustainable produced juices, smoothies, ice
+cream and other tasty goods. It can be a bumpy orange, a banana with flaws or a lemon that looks
+like it just ate a lemon itself. We control, sort and wash. Dents are cut of. The little we sort
+away gets turned into nutritious soil so that new veggies can grow. That’s good!
+
+To work with rescued fruits is a challenge - it requires a lot of hands from our staff that knows
+and understands the craftsmanship behind a really tasty juice and it also requires that we let the
+natural flow of fruits and vegetables control what we do. A good structure for taking care of fruit
+waste is lacking thus making it impossible for us to work with only rescued fruits. When we lack raw
+products we buy it from our friends in the business.
+
+When there’s no more fruit and veggies being thrown away we’ve reached our goal. Until then we
+promise that we will never stop fighting for a healthy and sustainable world.
+
+Visit our website https://rscued.se/.`
+
+
+const swegreen = `Swegreen is a Swedish FoodTech company that offers digital, efficient and circular solutions
+for urban cultivation in closed and controlled environments. By combining computer science,
+advanced technology and agricultural competence, we contribute to the development of urban
+resilience and sustainable food production with global ambitions. Our company was established
+in 2019 and provides fresh, nutrient rich, high-quality leafy greens, salad and herbs on a
+subscription basis to our customers, produced close to the consumers through centrally located,
+climate smart Urban Farms. Read more at [www.swegreen.com](https://www.swegreen.com).`
+
+
+const tebrito= `Tebritos goal is to transform the protein supply of the future. In order to feed a growing
+population, action is needed towards making our eating habits more sustainable to minimize
+the effect on climate. Insects are very efficient in converting biomass to high quality
+proteins and oils. It's possible to produce them in large scale in automated facilities,
+using side streams from the cereal industry.  That's making them both sustainable and very
+economically viable.
+
+Tebrito is therefore specialising in processing the food needed in the future. They have
+developed a new protein food derived from insects. The product is 88% percent pure, neutral
+in taste, white in colour and has promising functional properties.
+
+Visit our website https://www.tebrito.se/.`
+
+const verdantips = `Verdantips is more than just a “green TripAdvisor” that connects eco-conscious diners with
+sustainable restaurants in their vicinity. Through the app, users are able to find dining
+options that align with their personal sustainability values whether it is just "vegan or
+vegetarian" or "plastic free" or "efficient water use" or "renewable energy" or more, without
+compromising their taste buds. Sustainable restaurants are able to market their achievements
+and practices and receive recommendations on the best areas to improve to make the biggest
+impact on their carbon footprint while attracting the most customers. The sustainability
+criteria used in the platform include animal product usage (vegetarian, vegan, flexitarian),
+food sourcing (meat from regenerative farms, produce grown using urban farming techniques,
+locally sourced), green energy usage, water usage, plastic usage, waste practices and much more.
+Thereby, creating a diverse platform for people to match their values and connect.
+
+We are three female engineers from three continents, connected by our passion to make the food
+sector sustainable. Over the years, we changed our lifestyles to become more climate neutral,
+and food remained the major area that was untapped. The ambiguity around what is sustainability
+in a restaurant, what green practices are they following, is vegan the only way to be sustainable
+etc. were questions that bothered us individually. When we met during our masters degree, we
+shared our struggles with each other and united to fix this.
+
+Are you curious to learn more? Visit our website https://verdantips.com/ and reach out to us as
+info@verdantips.com.`
+
+
+
+
+export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodLoopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, noquofoods, restauranglabbet}
 
