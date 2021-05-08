@@ -26,6 +26,7 @@ const Layout = (props) => {
               <img style={{ height: "4rem", maxWidth: '14rem' }} src={digFairLogo} />
             </Link>
           </Typography>
+          {/* switch the places for text and burger */}
 
           {/* <Button
             style={{ margin: "auto" }}
@@ -35,6 +36,9 @@ const Layout = (props) => {
           >
           Test
           </Button> */}
+           {/* change the aname of noquo foods */}
+           {/* put the schedule button either in header or make the button bigger , should be visible always irrespective of scrolling*/}
+            {/* scaling the points by 10 for the quiz */}
 
           <Button
             style={{ margin: "auto", borderRadius: "30px" }}
@@ -42,12 +46,13 @@ const Layout = (props) => {
             onClick={handleClick}
           >
            
-
+           <p style={{color: 'red', fontSize: '3rem', fontFamily: 'monospace', marginLeft: '25px'}}>Click to Checkout!</p>
+            
+            <img style={{ height: "3rem", width: "3rem" }} src={burger} />
             <p style={{ fontSize: "2rem", fontWeight: "40px", color: "black" }}>
               {points}
             </p>
-            <img style={{ height: "3rem", width: "3rem" }} src={burger} />
-          <p style={{color: 'red', fontSize: '1rem'}}>Click to Checkout!</p>
+         
           </Button>
         </Toolbar>
       </AppBar>

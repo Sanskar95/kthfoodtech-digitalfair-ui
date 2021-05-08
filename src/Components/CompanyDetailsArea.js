@@ -7,7 +7,11 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 import Quiz from "react-quiz-component";
 import { getCompanyQuestions } from "../Rest/QuestionService";
-import { changeUserPoints, changeUserSnakePoints } from "../Rest/UserService";
+import {
+  changeUserPoints,
+  changeUserSnakePoints,
+  getUserByUsername,
+} from "../Rest/UserService";
 import { withRouter } from "react-router-dom";
 import Snake from "react-simple-snake";
 import AppBar from "@material-ui/core/AppBar";
@@ -57,6 +61,7 @@ class CompanyDetailsArea extends Component {
       score: 0,
       companyObject: {},
       markdown: "",
+      userData: null,
     };
   }
 
@@ -82,6 +87,14 @@ class CompanyDetailsArea extends Component {
       (company) => company.companyUrlString === companyNameFromUrl
     )[0];
     this.setState({ companyObject: companyObject });
+  };
+
+  getUserData = () => {
+    const userData = getUserByUsername(localStorage.getItem("username")).then(
+      (response) => {
+        this.setState({ userData: response.data });
+      }
+    );
   };
 
   handleModalOpen = () => {
@@ -123,7 +136,13 @@ class CompanyDetailsArea extends Component {
   };
 
   render() {
-    const { isModalOpen, quiz, isSnakeModalOpen, companyObject } = this.state;
+    const {
+      isModalOpen,
+      quiz,
+      isSnakeModalOpen,
+      companyObject,
+      userData,
+    } = this.state;
     return (
       <div>
         <div style={{ margin: "auto", height: "10rem" }}>
@@ -131,7 +150,6 @@ class CompanyDetailsArea extends Component {
             style={{ margin: "1rem", backgroundColor: "#AAE2ED" }}
             elevation={3}
           >
-           
             <img
               style={{
                 display: "block",
@@ -140,7 +158,15 @@ class CompanyDetailsArea extends Component {
               }}
               src={window.location.origin + companyObject.headerImagePath}
             />
-             <Typography style={{fontSize: '3rem',textAlign: 'center', fontWeight: '1000'}}>{companyObject.companyName}</Typography>
+            <Typography
+              style={{
+                fontSize: "3rem",
+                textAlign: "center",
+                fontWeight: "1000",
+              }}
+            >
+              {companyObject.companyName}
+            </Typography>
             <Markdown
               style={{
                 width: "80%",
@@ -151,24 +177,29 @@ class CompanyDetailsArea extends Component {
               }}
               children={companyMarkdowns[this.props.match.params.companyName]}
             />
-            
+
             <div style={{ textAlign: "center", padding: "1rem" }}>
-           
-              {quiz && quiz.questions.length > 0 && companyObject.showQuiz && (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  style={{
-                    fontSize: "20px",
-                    backgroundColor: "coral",
-                    borderRadius: "30px",
-                  }}
-                  onClick={this.handleModalOpen}
-                >
-                  Play quiz!
-                </Button>
-              )}
+              { 
+                quiz &&
+                quiz.questions.length > 0 &&
+                companyObject.showQuiz && (
+                  <Button
+                    variant="contained"
+                    disabled={!userData.listOfCompanies
+                      .split("-")
+                      .includes(this.props.match.params.companyName)}
+                    color="primary"
+                    size="large"
+                    style={{
+                      fontSize: "20px",
+                      backgroundColor: "coral",
+                      borderRadius: "30px",
+                    }}
+                    onClick={this.handleModalOpen}
+                  >
+                    Play quiz!
+                  </Button>
+                )}
               {this.props.match.params.companyName === "kthFoodTech" && (
                 <Button
                   variant="contained"

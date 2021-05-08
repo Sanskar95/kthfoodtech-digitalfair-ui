@@ -39,7 +39,7 @@ export default class HomeScreen extends Component {
     return (
       <div>
         <div style={{textAlign: 'center'}}>
-        <Button onClick={this.handleScheduleOpen} size="small" color="secondary" variant="outlined" style={{margin: '1rem'}}>
+        <Button onClick={this.handleScheduleOpen} size="small" color="secondary" variant="contained" style={{margin: '1rem', fontSize: '2rem', borderRadius: '20px', backgroundColor: 'green', fontFamily: 'monospace'}}>
           Click here for schedule!
         </Button>
         </div>
