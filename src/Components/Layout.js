@@ -23,7 +23,7 @@ const Layout = (props) => {
         <Toolbar>
           <Typography style={{ flexGrow: 1 }}>
             <Link to="/">
-              <img style={{ height: "8rem", width: "15rem" }} src={logo} />
+              <img style={{ height: "4rem", maxWidth: '14rem' }} src={digFairLogo} />
             </Link>
           </Typography>
 
