@@ -79,6 +79,7 @@ class CompanyDetailsArea extends Component {
   componentDidMount() {
     this.getDisplayData(companyStuff);
     this.fetchRequests();
+    this.getUserData();
   }
 
   getDisplayData = (companyStuff) => {
@@ -109,12 +110,14 @@ class CompanyDetailsArea extends Component {
   };
 
   handlePointsSubmit = () => {
-    changeUserPoints(localStorage.getItem("username"), this.state.score).then(
-      () => {
-        this.setState({ isModalOpen: false });
-        window.location.reload();
-      }
-    );
+    changeUserPoints(
+      localStorage.getItem("username"),
+      this.state.score,
+      this.props.match.params.companyName
+    ).then(() => {
+      this.setState({ isModalOpen: false });
+      window.location.reload();
+    });
   };
 
   handleSnakePointsSubmit = () => {
@@ -179,27 +182,26 @@ class CompanyDetailsArea extends Component {
             />
 
             <div style={{ textAlign: "center", padding: "1rem" }}>
-              { 
-                quiz &&
-                quiz.questions.length > 0 &&
-                companyObject.showQuiz && (
-                  <Button
-                    variant="contained"
-                    disabled={!userData.listOfCompanies
+              {quiz && quiz.questions.length > 0 && companyObject.showQuiz && (
+                <Button
+                  variant="contained"
+                  disabled={userData &&
+                    userData.listOfCompanies
                       .split("-")
-                      .includes(this.props.match.params.companyName)}
-                    color="primary"
-                    size="large"
-                    style={{
-                      fontSize: "20px",
-                      backgroundColor: "coral",
-                      borderRadius: "30px",
-                    }}
-                    onClick={this.handleModalOpen}
-                  >
-                    Play quiz!
-                  </Button>
-                )}
+                      .includes(this.props.match.params.companyName)
+                  }
+                  color="primary"
+                  size="large"
+                  style={{
+                    fontSize: "20px",
+                    backgroundColor: "coral",
+                    borderRadius: "30px",
+                  }}
+                  onClick={this.handleModalOpen}
+                >
+                  Play quiz!
+                </Button>
+              )}
               {this.props.match.params.companyName === "kthFoodTech" && (
                 <Button
                   variant="contained"
