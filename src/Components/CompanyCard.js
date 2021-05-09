@@ -48,9 +48,11 @@ function CompanyCard(props) {
             {props.companyName}
           </Typography>
 
-          <Typography style={{ fontSize: "15px", fontWeight: "200" }}>
-            Webina6
-          </Typography>
+          {props.eventFlag && (
+            <Typography style={{ fontSize: "15px", fontWeight: "1000" }}>
+              Webinar Available!
+            </Typography>
+          )}
         </CardContent>
       </CardActionArea>
       <CardActions>

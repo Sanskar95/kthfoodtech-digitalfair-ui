@@ -39,7 +39,7 @@ const enklakassen=`Impact startup that simplifies sustainable eating habits. Our
 Visit our website https://enklakassen.se/.`
 
 
-const foodLoopz= `Foodloopz works for the vision of Zero Food Waste in the food industry. We work as consultants and help companies find creative solutions to the food waste issue. We also take initiative to collaborative projects where we can make an impact. Action is all that matters.
+const foodloopz= `Foodloopz works for the vision of Zero Food Waste in the food industry. We work as consultants and help companies find creative solutions to the food waste issue. We also take initiative to collaborative projects where we can make an impact. Action is all that matters.
 
 Visit our website http://www.foodloopz.se/.`
 
@@ -259,5 +259,5 @@ const fooever = `With the help of tags/filters (origin, type of dish, type of fo
 For more information please visit https://www.fooever.com`
 
 
-export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodLoopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, noquofoods, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever}
+export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, noquofoods, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever}
 
