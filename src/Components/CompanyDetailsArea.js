@@ -34,13 +34,13 @@ function tranformQuestionResponse(questionResponse) {
     modifiedObject["question"] = questionObject.question;
     modifiedObject["questionType"] = "text";
     modifiedObject["answers"] = questionObject.options.split(",");
-    modifiedObject["correctAnswer"] = questionObject.options
+    modifiedObject["correctAnswer"] = (questionObject.options
       .split(",")
-      .indexOf(questionObject.correctAnswer)
+      .indexOf(questionObject.correctAnswer) +1)
       .toString();
     modifiedObject["messageForCorrectAnswer"] = "Correct answer. Good job.";
     modifiedObject["messageForIncorrectAnswer"] = "Incorrect answer LOL";
-    modifiedObject["point"] = "1";
+    modifiedObject["point"] = "10";
     transformedQuestions.push(modifiedObject);
   }
 
@@ -71,7 +71,7 @@ class CompanyDetailsArea extends Component {
     );
     let quiz = {};
     quiz["quizTitle"] = "Company Quiz";
-    quiz["quizSynopsis"] = "Some generic description";
+    quiz["quizSynopsis"] = "Food Tech Quiz";
     quiz["questions"] = tranformQuestionResponse(questions.data);
     this.setState({ quiz: quiz });
   };
@@ -157,7 +157,7 @@ class CompanyDetailsArea extends Component {
               style={{
                 display: "block",
                 margin: "0 auto",
-                maxWidth: "60%",
+                maxWidth: "50%",
               }}
               src={window.location.origin + companyObject.headerImagePath}
             />

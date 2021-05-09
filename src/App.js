@@ -31,6 +31,7 @@ function App() {
     } else {
       getUserByUsername(localStorage.getItem("username")).then((response) => {
         setUser(response.data);
+        
         updatePoints(response.data.points + response.data.snakePoints);
       }).catch(()=>{
         setIsUserModalOpen(true);
@@ -96,6 +97,7 @@ function App() {
           path="/checkout"
           component={CodeCheckoutScreen}
         />
+        
       </Router>
 
       <Dialog open={isUserModalOpen} aria-labelledby="form-dialog-title">
@@ -115,16 +117,6 @@ function App() {
             variant="outlined"
           />
 
-          <TextField
-            onChange={handleEmailTextFieldChange}
-            autoFocus
-            margin="dense"
-            id="email"
-            label="Email Address(Optional)"
-            type="email"
-            fullWidth
-            variant="outlined"
-          />
         </DialogContent>
         <DialogActions>
           {/* <Button onClick={this.handleClose} color="primary">

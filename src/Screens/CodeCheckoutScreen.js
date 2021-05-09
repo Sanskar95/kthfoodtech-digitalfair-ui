@@ -6,14 +6,13 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Markdown from "markdown-to-jsx";
 
-
 import Button from "@material-ui/core/Button";
 import { Typography } from "@material-ui/core";
 toast.configure();
 
 const markdown = `If you have the code from the webinars or panel discussion, please type that code in the box.We won't sell or share your information with any third party, unless you opt in.
 
-                            Your email will only be used for this competition, and then deleted afterwards.`;
+                    Your email will only be used for this competition, and then deleted afterwards.`;
 
 const styles = () => ({
   textField: {
@@ -51,7 +50,16 @@ class CheckoutScreen extends Component {
     const { classes } = this.props;
     return (
       <div>
-        <Typography style={{fontSize: '3rem', fontWeight: '800',textAlign: 'center', color: 'green'}}>Checkout!</Typography>
+        <Typography
+          style={{
+            fontSize: "3rem",
+            fontWeight: "800",
+            textAlign: "center",
+            color: "green",
+          }}
+        >
+          Checkout!
+        </Typography>
         <Markdown
           style={{
             width: "80%",

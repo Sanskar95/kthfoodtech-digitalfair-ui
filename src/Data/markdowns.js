@@ -215,8 +215,49 @@ shared our struggles with each other and united to fix this.
 Are you curious to learn more? Visit our website https://verdantips.com/ and reach out to us as
 info@verdantips.com.`
 
+const hollbium=`##**Welcome to Hollbium!**
+ 
+The world population grows while climate change affects agriculture negatively(& vise-versa). Food production needs to be increased while decentralized to avoid negative side effects.
+
+**Our vision is to make farming a natural part of every indoor environment to contribute to food resilience and sustainable urban development.**
+
+Our hydroponic Loop combines a subscription-based business model for businesses with a biophilic design. Besides growing organic edible greens without soil, transportation or packaging,
+ it is a multi-sensory experience (taste, light, cleaner air & scent) for increased wellbeing, comfort & creativity. The Loops are made to last, designed to be repaired, reused, recycled.
+Enjoy the beauty & fresh taste of hyper-locally produced greens while being part of a bigger movement for sustainable & self-sufficient food.
+Curious to learn more? Visit our website: https://www.hollbium.com/`
+
+const yipin= `**Hello KTH student and Foodtech enthusiast! Glad you're interested in the food of the future, because so are we.**
+
+We are yipin, a family business that has made its own tofu for as long as we can remember. When the move went from China to Sweden in 1998, great-grandmother's tofu recipe had an obvious place in her inside pocket. Then we did not know that it would develop into a small tofu factory. Today we still make our tofu according to family tradition - in the way we grew up with and love, and with new exciting flavors. We are convinced that tofu has an obvious place on the plate of the future, for both the climate and the taste buds.
+
+Good luck with the quiz! Feel free to visit our website and Instagram when you are done and let yourself be inspired! https://www.yipin.se`
+
+const urbanOasis= `At Urban Oasis we grow food in new ways to get closer to what is long-term sustainable. With shorter transportations, climate-smart cultivation and innovative tech solutions we deliver crispy greens all year round.
+
+Curious to learn more? Visit our website: https://www.urbanoasisfarming.com/`
+
+const kthInnovation = `KTH Innovation supports students, researchers and employees at KTH who want to develop an idea or create benefit with their research. The support is open to everyone at KTH, completely free and you do not need to apply to get started. Every year we meet over 350 new ideas from KTH. Together, we make it possible for new technology to enter society and create the solutions of the future.
+ 
+Since the start in 2007, we have helped many teams realize their foodtech ideas. We have seen everything from hydroponic cultivation systems, food from insects, climate labeling of dishes, and digital dietitians. If you have a foodtech idea you want to develop, go to www.kth.se/innovation!
+ 
+Follow @kthinnovation on Instagram! https://www.instagram.com/kthinnovation/
+ 
+KTH Innovation supports students, researchers and employees at KTH who want to develop an idea or create impact with their research. Our support is open to everyone at KTH, completely free and you do not need to apply to get started. Every year we meet over 350 new ideas from KTH. Together, we create opportunities for new technology to come society to use and create impact for a better future for all.
+ 
+Since the start in 2007, we have helped many teams bring their foodtech ideas to life. People from KTH have developed solutions from hydroponic farms, to insect-based food, climate labeling restaurant dishes, and digital dieticians. If you have a foodtech idea you want to develop, visit www.kth.se/innovation to get started!
+ 
+Follow @kthinnovation on Instagram! https://www.instagram.com/kthinnovation/`
+
+const tele2= `**At Tele2 IoT connectivity is at the heart of everything we do – but it’s not everything we do.**
+Whether you’re working in five cities or on five continents, whether you are just starting your IoT journey or are taking it to the next level, we are ready to support you with world class connectivity and the IoT enabling services that enable you to successfully digitize and manage your business.
+What we do is simply connect your world – and give you the tools you need to make your IoT solution a success.
+For more information, please visit https://tele2iot.com!
+`
+
+const fooever = `With the help of tags/filters (origin, type of dish, type of food, allergy friendly, etc) and geo-location, Fooever lets the food providers be found by potential buyers in one single solution. We include a payment solution, which helps pre-ordering and administration. We also include a rating system, to reward quality. Fooever is for both food professionals and people who have food interests. The idea applies to everyone from the local tomato farmer to the seafood buffet caterer to meat sold directly from the hunter. In other words, Fooever includes all sorts of food in one app.
+
+For more information please visit https://www.fooever.com`
 
 
-
-export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodLoopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, noquofoods, restauranglabbet}
+export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodLoopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, noquofoods, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever}
 

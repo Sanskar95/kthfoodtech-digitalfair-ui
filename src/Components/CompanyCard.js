@@ -38,11 +38,6 @@ function CompanyCard(props) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        {/* <CardMedia
-          className={classes.media}
-          image={props.imagePath}
-          onClick={handleClick}
-        /> */}
         <img
           onClick={handleClick}
           style={{ width: "100%", height: "400px" }}

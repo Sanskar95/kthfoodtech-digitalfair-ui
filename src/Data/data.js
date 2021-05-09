@@ -1,4 +1,55 @@
 export const companyStuff = [
+  
+  {
+    imagePath: "images/Fooever.png",
+    companyName: "Fooever",
+    showQuiz: true,
+    companyUrlString: "fooever",
+    meetingLink: "https://www.facebook.com/",
+    headerImagePath: "/images/fooever-header.png",
+  },
+  {
+    imagePath: "images/Tele2_IoT_black_color.png",
+    companyName: "Tele 2",
+    showQuiz: true,
+    companyUrlString: "tele2",
+    meetingLink: "https://www.facebook.com/",
+    headerImagePath: "/images/Tele2-Foodora-AdobeRGB-8bit-8939-scaled.jpg",
+  },
+  {
+    imagePath: "images/kthLogo.png",
+    companyName: "KTH Innovation",
+    showQuiz: true,
+    companyUrlString: "kthInnovation",
+    meetingLink: "https://www.facebook.com/",
+    headerImagePath: "/images/kthInnovation-header.jpg",
+  },
+  {
+    imagePath: "images/urbanOasis-logo.png",
+    companyName: "Urban Oasis",
+    showQuiz: true,
+    companyUrlString: "urbanOasis",
+    meetingLink: "https://www.facebook.com/",
+    headerImagePath: "/images/urbanOasis-header.png",
+  },
+
+  {
+    imagePath: "images/Yipin-logo.jpg",
+    companyName: "Yipin",
+    showQuiz: true,
+    companyUrlString: "yipin",
+    meetingLink: "https://www.facebook.com/",
+    headerImagePath: "/images/yipin-header.png",
+  },
+  {
+    imagePath: "images/hollbium-logo.png",
+    companyName: "Hollbium",
+    showQuiz: true,
+    companyUrlString: "hollbium",
+    meetingLink: "https://www.facebook.com/",
+    headerImagePath: "/images/hollbium-header.jpeg",
+  },
+  
   {
     imagePath: "images/sweden-foodtech.png",
     companyName: "Sweden Foodtech",
