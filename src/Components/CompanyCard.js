@@ -49,7 +49,7 @@ function CompanyCard(props) {
           </Typography>
 
           <Typography style={{ fontSize: "15px", fontWeight: "200" }}>
-            Webinar on friday 4 to 5
+            Webina6
           </Typography>
         </CardContent>
       </CardActionArea>
