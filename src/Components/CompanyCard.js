@@ -63,14 +63,16 @@ function CompanyCard(props) {
           Learn More
         </Button>
 
-        <Button
-          onClick={() => handleEventButtonClick(props.meetingLink)}
-          size="small"
-          color="green"
-          variant="outlined"
-        >
-          Take me to the event!
-        </Button>
+        {props.eventFlag === true && (
+          <Button
+            onClick={() => handleEventButtonClick(props.meetingLink)}
+            size="small"
+            color="green"
+            variant="outlined"
+          >
+            Take me to the event!
+          </Button>
+        )}
       </CardActions>
     </Card>
   );
