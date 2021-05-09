@@ -86,7 +86,7 @@ export const companyStuff = [
      imagePath: "images/foodLoopz-logo.png",
      companyName: "FoodLoopz",
      showQuiz: true,
-     companyUrlString: "foodLoopz",
+     companyUrlString: "foodloopz",
      meetingLink: "https://www.facebook.com/",
      headerImagePath: "/images/foodloopz-header.jpg",
    },
