@@ -196,7 +196,7 @@ export const companyStuff = [
     companyUrlString: "tebrito",
     eventFlag: false,
     meetingLink: "https://www.facebook.com/",
-    headerImagePath: "",
+    headerImagePath: "/images/Tebrito-Bertrand.jpg",
   },
 
   {
