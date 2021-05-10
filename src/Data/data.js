@@ -151,10 +151,10 @@ export const companyStuff = [
   },
 
   {
-    imagePath: "images/noquofoods-small.png",
+    imagePath: "images/stockheld-dreamry logo.png",
     companyName: "Stockeld Dreamery",
     showQuiz: true,
-    companyUrlString: "noquofoods",
+    companyUrlString: "stockeldDreamery",
     meetingLink: "https://www.facebook.com/",
     eventFlag: false,
     headerImagePath: "/images/noquofoods-header.jpg",

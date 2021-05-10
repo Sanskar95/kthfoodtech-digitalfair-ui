@@ -113,11 +113,11 @@ then grow into small strands of muscle tissue which can then be layered to creat
 
 Visit our website https://www.mosameat.com/.`
 
-const noquofoods=`We love cheese. We love yoghurt. Ice cream too, and so many other animal based products
+const stockeldDreamery=`We love cheese. We love yoghurt. Ice cream too, and so many other animal based products
 that are fundamental to our culture and heritage. But using animals to produce these
 goodies is extremely wasteful and destructive.
 
-In early 2019, Sorosh Tavakoli and Anja Leissner, started Noquo Foods to challenge the
+In early 2019, Sorosh Tavakoli and Anja Leissner, started Stockeld Dreamery to challenge the
 status quo and re-invent the foods we love, starting with cheese.
 
 The non-dairy cheese products are seeing lower adoption than other products in the
@@ -127,15 +127,15 @@ experience. Then there’s the premium desert cheeses made from cashew nuts. The
 expensive and cover only a niche category. This highlights a big hole in the cheese
 market (pun intended).
 
-Instead of coconut or cashews, Noquo Foods is making cheese out of legumes that are formed
+Instead of coconut or cashews,Stockeld Dreamery is making cheese out of legumes that are formed
 into what is called a “stable matrix.” This will allow the cheese to slice, melt, and
 taste like the real thing, and also have more protein than some other vegan options.
 
-Initially Noquo Foods will sell plant-based cheese to foodservice providers in Sweden in a
+Initially Stockeld Dreamery will sell plant-based cheese to foodservice providers in Sweden in a
 similar model to Impossible Foods or Oatly. Down the road the aim is to create their own
 branded product line for retail.
 
-Visit our website http://noquofoods.com/.`
+Visit our website https://www.stockeld.com/.`
 
 const restauranglabbet= `Restauranglabbet is a platform for accelerated innovation in sustainable food and food
 industry. Through a design-driven process they create a full-scale test bed in a
@@ -259,5 +259,5 @@ const fooever = `With the help of tags/filters (origin, type of dish, type of fo
 For more information please visit https://www.fooever.com`
 
 
-export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, noquofoods, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever}
+export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, stockeldDreamery, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever}
 
