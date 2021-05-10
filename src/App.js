@@ -17,8 +17,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import { createUser } from "./Rest/UserService";
 import CodeCheckoutScreen from "./Screens/CodeCheckoutScreen";
-import LinearProgress from '@material-ui/core/LinearProgress';
-
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 function App() {
   const [username, setUsername] = React.useState(null);
@@ -31,34 +30,34 @@ function App() {
     if (!localStorage.getItem("username")) {
       setIsUserModalOpen(true);
     } else {
-      getUserByUsername(localStorage.getItem("username")).then((response) => {
-        setUser(response.data);
-        
-        updatePoints(response.data.points + response.data.snakePoints);
-      }).catch(()=>{
-        setIsUserModalOpen(true);
-      })
+      getUserByUsername(localStorage.getItem("username"))
+        .then((response) => {
+          setUser(response.data);
+
+          updatePoints(response.data.points + response.data.snakePoints);
+        })
+        .catch(() => {
+          setIsUserModalOpen(true);
+        });
     }
   }, []);
 
   const handleGo = () => {
-    setShowSpinner(true)
+    setShowSpinner(true);
     getUserByUsername(username)
       .then((response) => {
         setIsUserModalOpen(false);
         localStorage.setItem("username", response.data.username);
-        setShowSpinner(false)
+        setShowSpinner(false);
         updatePoints(response.data.points + response.data.snakePoints);
-        
       })
       .catch(() => {
         createUser(username, email).then((response) => {
           setIsUserModalOpen(false);
           localStorage.setItem("username", response.data.username);
-          setShowSpinner(false)
-         
+          setShowSpinner(false);
         });
-      })
+      });
   };
 
   const handleUsernameTextFieldChange = (event) => {
@@ -76,14 +75,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <ThemeContext.Provider value={{points, increment}}>
+        <ThemeContext.Provider value={{ points, increment }}>
           <Layout />
         </ThemeContext.Provider>
         <Route
           exact
           path="/"
           component={() => (
-            <ThemeContext.Provider value={{points, increment}}>
+            <ThemeContext.Provider value={{ points, increment }}>
               <HomeScreen />{" "}
             </ThemeContext.Provider>
           )}
@@ -92,24 +91,18 @@ function App() {
           exact
           path="/company/:companyName"
           component={() => (
-            <ThemeContext.Provider value={{points, increment}}>
+            <ThemeContext.Provider value={{ points, increment }}>
               <CompanyScreen />{" "}
             </ThemeContext.Provider>
           )}
         />
-        <Route
-          exact
-          path="/checkout"
-          component={CodeCheckoutScreen}
-        />
-        
+        <Route exact path="/checkout" component={CodeCheckoutScreen} />
       </Router>
 
       <Dialog open={isUserModalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Details!</DialogTitle>
         <DialogContent>
-          { showSpinner &&       <LinearProgress />
-}
+          {showSpinner && <LinearProgress />}
           <DialogContentText>
             Enter username so that we can identify you!
           </DialogContentText>
@@ -123,7 +116,6 @@ function App() {
             fullWidth
             variant="outlined"
           />
-
         </DialogContent>
         <DialogActions>
           {/* <Button onClick={this.handleClose} color="primary">

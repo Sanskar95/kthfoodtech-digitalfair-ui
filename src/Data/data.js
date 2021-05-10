@@ -1,6 +1,16 @@
 export const companyStuff = [
   
   {
+    imagePath: "images/ica-logo.png",
+    companyName: "ICA",
+    showQuiz: true,
+    companyUrlString: "ica",
+    eventFlag: true,
+    meetingLink: "https://kth-se.zoom.us/j/69830295666",
+    headerImagePath: "/images/ica-header.jpg",
+  },
+ 
+  {
     imagePath: "images/Fooever.png",
     companyName: "Fooever",
     showQuiz: true,
@@ -112,7 +122,7 @@ export const companyStuff = [
      headerImagePath: "/images/foodtech-slogan.jpg",
    },
    {
-    imagePath: "images/global-bugs-small.png",
+    imagePath: "images/global-bugs-logo.jpeg",
     companyName: "Global Bugs",
     showQuiz: true,
     companyUrlString: "globalBugs",

@@ -258,6 +258,8 @@ const fooever = `With the help of tags/filters (origin, type of dish, type of fo
 
 For more information please visit https://www.fooever.com`
 
+const ica=`s`
 
-export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, stockeldDreamery, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever}
+
+export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, stockeldDreamery, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever, ica}
 
