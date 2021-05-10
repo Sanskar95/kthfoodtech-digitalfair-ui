@@ -17,6 +17,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "@material-ui/core/Button";
 import { createUser } from "./Rest/UserService";
 import CodeCheckoutScreen from "./Screens/CodeCheckoutScreen";
+import LinearProgress from '@material-ui/core/LinearProgress';
+
 
 function App() {
   const [username, setUsername] = React.useState(null);
@@ -24,7 +26,7 @@ function App() {
   const [isUserModalOpen, setIsUserModalOpen] = React.useState(false);
   const [user, setUser] = React.useState({});
   const [points, updatePoints] = React.useState(0);
-
+  const [showSpinner, setShowSpinner] = React.useState(false);
   useEffect(() => {
     if (!localStorage.getItem("username")) {
       setIsUserModalOpen(true);
@@ -40,10 +42,12 @@ function App() {
   }, []);
 
   const handleGo = () => {
+    setShowSpinner(true)
     getUserByUsername(username)
       .then((response) => {
         setIsUserModalOpen(false);
         localStorage.setItem("username", response.data.username);
+        setShowSpinner(false)
         updatePoints(response.data.points + response.data.snakePoints);
         
       })
@@ -51,6 +55,7 @@ function App() {
         createUser(username, email).then((response) => {
           setIsUserModalOpen(false);
           localStorage.setItem("username", response.data.username);
+          setShowSpinner(false)
          
         });
       })
@@ -103,8 +108,10 @@ function App() {
       <Dialog open={isUserModalOpen} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Details!</DialogTitle>
         <DialogContent>
+          { showSpinner &&       <LinearProgress />
+}
           <DialogContentText>
-            Enter username and email so that we can identify you!
+            Enter username so that we can identify you!
           </DialogContentText>
           <TextField
             onChange={handleUsernameTextFieldChange}
