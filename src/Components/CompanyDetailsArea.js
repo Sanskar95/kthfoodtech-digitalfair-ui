@@ -268,8 +268,19 @@ class CompanyDetailsArea extends Component {
               <Typography variant="h6">Snake</Typography>
             </Toolbar>
           </AppBar>
+          
           <Snake />
           <div style={{ textAlign: "center" }}>
+          <Typography
+              style={{
+                fontSize: "1.5rem",
+                color: 'red',
+                textAlign: "center",
+                fontWeight: "100",
+              }}
+            >
+             You will be able to submit this score only once!!
+            </Typography>
             <Button
               autoFocus
               style={{
