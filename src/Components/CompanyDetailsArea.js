@@ -203,8 +203,8 @@ class CompanyDetailsArea extends Component {
                   Play quiz!
                 </Button>
               )}
-              {this.props.match.params.companyName === "kthFoodTech" ||
-                (this.props.match.params.companyName === "rscued" && (
+              {(this.props.match.params.companyName === "kthFoodTech" ||
+                this.props.match.params.companyName === "rscued") && (
                   <Button
                     variant="contained"
                     color="primary"
@@ -218,7 +218,7 @@ class CompanyDetailsArea extends Component {
                   >
                     Play snake!
                   </Button>
-                ))}
+                )}
             </div>
           </Paper>
 
