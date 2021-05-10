@@ -34,10 +34,10 @@ function tranformQuestionResponse(questionResponse) {
     modifiedObject["question"] = questionObject.question;
     modifiedObject["questionType"] = "text";
     modifiedObject["answers"] = questionObject.options.split(",");
-    modifiedObject["correctAnswer"] = (questionObject.options
-      .split(",")
-      .indexOf(questionObject.correctAnswer) +1)
-      .toString();
+    modifiedObject["correctAnswer"] = (
+      questionObject.options.split(",").indexOf(questionObject.correctAnswer) +
+      1
+    ).toString();
     modifiedObject["messageForCorrectAnswer"] = "Correct answer. Good job.";
     modifiedObject["messageForIncorrectAnswer"] = "Incorrect answer LOL";
     modifiedObject["point"] = "10";
@@ -185,7 +185,8 @@ class CompanyDetailsArea extends Component {
               {quiz && quiz.questions.length > 0 && companyObject.showQuiz && (
                 <Button
                   variant="contained"
-                  disabled={userData &&
+                  disabled={
+                    userData &&
                     userData.listOfCompanies
                       .split("-")
                       .includes(this.props.match.params.companyName)
@@ -202,21 +203,22 @@ class CompanyDetailsArea extends Component {
                   Play quiz!
                 </Button>
               )}
-              {this.props.match.params.companyName === "kthFoodTech" && (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  style={{
-                    fontSize: "20px",
-                    backgroundColor: "green",
-                    borderRadius: "30px",
-                  }}
-                  onClick={this.handleSnakeModalOpen}
-                >
-                  Play snake!
-                </Button>
-              )}
+              {this.props.match.params.companyName === "kthFoodTech" ||
+                (this.props.match.params.companyName === "rscued" && (
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    style={{
+                      fontSize: "20px",
+                      backgroundColor: "green",
+                      borderRadius: "30px",
+                    }}
+                    onClick={this.handleSnakeModalOpen}
+                  >
+                    Play snake!
+                  </Button>
+                ))}
             </div>
           </Paper>
 
