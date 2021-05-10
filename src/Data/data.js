@@ -61,8 +61,8 @@ export const companyStuff = [
     companyName: "Hollbium",
     showQuiz: true,
     companyUrlString: "hollbium",
-    eventFlag: false,
-    meetingLink: "https://www.facebook.com/",
+    eventFlag: true,
+    meetingLink: "https://kth-se.zoom.us/j/62500790214",
     headerImagePath: "/images/hollbium-header.jpeg",
   },
   
