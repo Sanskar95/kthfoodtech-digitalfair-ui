@@ -167,7 +167,7 @@ export const companyStuff = [
     companyUrlString: "stockeldDreamery",
     meetingLink: "https://www.facebook.com/",
     eventFlag: false,
-    headerImagePath: "/images/noquofoods-header.jpg",
+    headerImagePath: "/images/sd-header.jpg",
   },
 
   {
