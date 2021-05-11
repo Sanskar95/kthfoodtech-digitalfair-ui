@@ -271,7 +271,7 @@ class CompanyDetailsArea extends Component {
           
           <Snake />
           <div style={{ textAlign: "center" }}>
-          <Typography
+          {/* <Typography
               style={{
                 fontSize: "1.5rem",
                 color: 'red',
@@ -280,7 +280,7 @@ class CompanyDetailsArea extends Component {
               }}
             >
              You will be able to submit this score only once!!
-            </Typography>
+            </Typography> */}
             <Button
               autoFocus
               style={{
