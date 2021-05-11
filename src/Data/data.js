@@ -1,7 +1,7 @@
 export const companyStuff = [
   
   {
-    imagePath: "images/ica-logo.png",
+    imagePath: "images/ica-logo-2.png",
     companyName: "ICA",
     showQuiz: true,
     companyUrlString: "ica",

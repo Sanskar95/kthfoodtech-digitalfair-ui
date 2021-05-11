@@ -258,7 +258,13 @@ const fooever = `With the help of tags/filters (origin, type of dish, type of fo
 
 For more information please visit https://www.fooever.com`
 
-const ica=`s`
+const ica=`ICA Gruppen’s core business is grocery retail. The Group includes ICA Sweden and Rimi Baltic which mainly conduct grocery retail, ICA Real Estate which owns and manages properties, ICA Bank which offers financial services and, since January 2015, Apotek Hjärtat which conducts pharmacy operations.
+
+
+ICA Gruppen has set a high bar for its extensive sustainability work, which involves a variety of activities.
+Increasing the proportion of plant-based food is the single most important change in creating a long-term, sustainable food system. To increase the range of sustainable, plant-based food and promote innovation, we have started ICA Växa, a major investment in increasing the proportion of Swedish-produced, plant-based food. The food should be good and loved by many. ICA Växa will work with the sustainability initiatives that have the greatest impact in the shortest time and that provide the greatest positive change in the entire Swedish food system.
+
+ICA Växa will be a large and important part of ICA's new climate ambition of halving the climate footprint from customers' purchases of food by 2030`
 
 
 export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, stockeldDreamery, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever, ica}

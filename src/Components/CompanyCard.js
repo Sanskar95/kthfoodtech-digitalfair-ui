@@ -24,7 +24,7 @@ function convertStringToCamelCase(sentence) {
 
 const useStyles = makeStyles({
   root: {
-    width: "550px",
+    width: "450px",
     margin: "10px",
   },
 });
@@ -40,7 +40,7 @@ function CompanyCard(props) {
       <CardActionArea>
         <img
           onClick={handleClick}
-          style={{ width: "100%", height: "400px" }}
+          style={{ width: "100%", height: "300px" }}
           src={props.imagePath}
         />
         <CardContent>
