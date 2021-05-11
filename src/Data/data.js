@@ -1,6 +1,16 @@
 export const companyStuff = [
   
   {
+    imagePath: "images/js-logo.png",
+    companyName: "Johannas Stadsodlingar",
+    showQuiz: true,
+    companyUrlString: "js",
+    eventFlag: false,
+    meetingLink: "https://kth-se.zoom.us/j/69830295666",
+    headerImagePath: "/images/js-header.jpeg",
+  },
+ 
+  {
     imagePath: "images/ica-logo-2.png",
     companyName: "ICA",
     showQuiz: true,

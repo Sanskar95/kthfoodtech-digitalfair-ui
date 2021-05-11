@@ -267,5 +267,16 @@ Increasing the proportion of plant-based food is the single most important chang
 ICA Växa will be a large and important part of ICA's new climate ambition of halving the climate footprint from customers' purchases of food by 2030`
 
 
-export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, stockeldDreamery, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever, ica}
+const js = `Johannas Stadsodlingar is based in Vallentuna. We took over a disused dairy farm three years ago where we now grow salads and herbs and other exciting vegetables – like pak choi and mustard leaves – in a circular system called aquaponics. We keep rainbow trout in large tanks; the fish waste is turned into nutrients for the leafy greens that float on rafts in water in separate basins.
+
+Our seedlings are raised in a separate room (where the calves used to be in the old dairy farm!). They grow in coco fibre until they are strong enough to be transplanted to the rafts.
+
+The farm is run by Anke Johanna, her partner Thomas and colleagues Mikael, Tomas and William who together designed and built the aquaponics installation.
+
+Click here for more info：https://www.johannas.org/
+
+`
+
+
+export {klimato,hillpop, a2o, swedenFoodtech, enklakassen, foodloopz, kthFoodTech, globalBugs, verdantips, innoscentia, tebrito, swegreen, rscued, mosaMeat, stockeldDreamery, restauranglabbet, hollbium, yipin, urbanOasis, kthInnovation, tele2, fooever, ica, js}
 
