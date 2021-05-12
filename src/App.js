@@ -121,7 +121,7 @@ function App() {
           {/* <Button onClick={this.handleClose} color="primary">
             Cancel
           </Button> */}
-          <Button onClick={handleGo} color="primary" variant="outlined">
+          <Button onClick={handleGo} color="primary" variant="outlined" disabled={(username===null || username==="")}>
             GO!
           </Button>
         </DialogActions>
