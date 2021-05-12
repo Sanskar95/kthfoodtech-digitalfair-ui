@@ -116,12 +116,32 @@ function App() {
             fullWidth
             variant="outlined"
           />
+          <TextField
+            onChange={handleEmailTextFieldChange}
+            autoFocus
+            margin="dense"
+            id="email"
+            label="Email"
+            type="email"
+            fullWidth
+            variant="outlined"
+          />
         </DialogContent>
         <DialogActions>
           {/* <Button onClick={this.handleClose} color="primary">
             Cancel
           </Button> */}
-          <Button onClick={handleGo} color="primary" variant="outlined" disabled={(username===null || username==="")}>
+          <Button
+            onClick={handleGo}
+            color="primary"
+            variant="outlined"
+            disabled={
+              username === null ||
+              username === "" ||
+              email === null ||
+              email === ""
+            }
+          >
             GO!
           </Button>
         </DialogActions>
