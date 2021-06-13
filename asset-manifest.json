@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/foodtech-digitalfair-ui-demo/static/css/main.92df21dd.chunk.css",
+    "main.js": "/foodtech-digitalfair-ui-demo/static/js/main.18cde9f4.chunk.js",
+    "main.js.map": "/foodtech-digitalfair-ui-demo/static/js/main.18cde9f4.chunk.js.map",
+    "runtime-main.js": "/foodtech-digitalfair-ui-demo/static/js/runtime-main.0329e95e.js",
+    "runtime-main.js.map": "/foodtech-digitalfair-ui-demo/static/js/runtime-main.0329e95e.js.map",
+    "static/css/2.6b1e5544.chunk.css": "/foodtech-digitalfair-ui-demo/static/css/2.6b1e5544.chunk.css",
+    "static/js/2.43e75e92.chunk.js": "/foodtech-digitalfair-ui-demo/static/js/2.43e75e92.chunk.js",
+    "static/js/2.43e75e92.chunk.js.map": "/foodtech-digitalfair-ui-demo/static/js/2.43e75e92.chunk.js.map",
+    "static/js/3.c08661a7.chunk.js": "/foodtech-digitalfair-ui-demo/static/js/3.c08661a7.chunk.js",
+    "static/js/3.c08661a7.chunk.js.map": "/foodtech-digitalfair-ui-demo/static/js/3.c08661a7.chunk.js.map",
+    "index.html": "/foodtech-digitalfair-ui-demo/index.html",
+    "static/css/2.6b1e5544.chunk.css.map": "/foodtech-digitalfair-ui-demo/static/css/2.6b1e5544.chunk.css.map",
+    "static/css/main.92df21dd.chunk.css.map": "/foodtech-digitalfair-ui-demo/static/css/main.92df21dd.chunk.css.map",
+    "static/js/2.43e75e92.chunk.js.LICENSE.txt": "/foodtech-digitalfair-ui-demo/static/js/2.43e75e92.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/foodtech-digitalfair-ui-demo/static/media/background.b41aa542.jpg",
+    "static/media/dig_fair_logo.d1756eb5.png": "/foodtech-digitalfair-ui-demo/static/media/dig_fair_logo.d1756eb5.png",
+    "static/media/logo.777c3d35.png": "/foodtech-digitalfair-ui-demo/static/media/logo.777c3d35.png",
+    "static/media/schedule.f271a2de.png": "/foodtech-digitalfair-ui-demo/static/media/schedule.f271a2de.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0329e95e.js",
+    "static/css/2.6b1e5544.chunk.css",
+    "static/js/2.43e75e92.chunk.js",
+    "static/css/main.92df21dd.chunk.css",
+    "static/js/main.18cde9f4.chunk.js"
+  ]
+}
